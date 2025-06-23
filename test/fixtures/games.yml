@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  has_multiplayer: false
+  cut_scenes_pausable: false
+  cut_scenes_pausable_remark: MyText
+  quick_resume_usable: false
+  quick_resume_remark: MyText
+  game_pausable: false
+  game_pausable_remark: MyText
+  quick_save_possible: false
+  quick_save_remark: MyText
+  mp_drop_out_penalty: false
+  mp_drop_out_penalty_remark: MyText
+  game_content_remark: MyText
+
+two:
+  title: MyString
+  has_multiplayer: false
+  cut_scenes_pausable: false
+  cut_scenes_pausable_remark: MyText
+  quick_resume_usable: false
+  quick_resume_remark: MyText
+  game_pausable: false
+  game_pausable_remark: MyText
+  quick_save_possible: false
+  quick_save_remark: MyText
+  mp_drop_out_penalty: false
+  mp_drop_out_penalty_remark: MyText
+  game_content_remark: MyText
