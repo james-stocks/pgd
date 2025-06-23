@@ -1,24 +1,10 @@
-# README
+# Parental Game Database
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![CI](https://github.com/james-stocks/pgd/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/james-stocks/pgd/actions/workflows/ci.yml)
 
-Things you may want to cover:
+A database of useful information for parent gamers. Can you pause cutscenes? Is quick resume broken? Let's find out!  
+This is NOT a database of suitability of child-friendly content, it's for you the parent to know if you can get 5-10 minutes of gameplay in peace. Though the database does remark on games that are more or less risky to play when a child might crash into the room at any moment :)
 
-* Ruby version
+## Where does this run?
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+TODO: Not deployed yet!
