@@ -1,6 +1,6 @@
 class EnableRlsAndPolicies < ActiveRecord::Migration[8.0]
   def change
-    return if ActiveRecord::Base.connection.adapter_name == "SQLite"
+    return unless Rails.env.production?
 
     # Policy: Allow read access for service_role and authenticated users
     execute <<-SQL

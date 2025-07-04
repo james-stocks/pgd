@@ -23,5 +23,8 @@ module Pgd
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Limit schema dump to the public schema (do not dump schemas and extensions, not compatible with other providers).
+    config.active_record.dump_schemas = :public
   end
 end
