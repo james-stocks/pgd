@@ -1,0 +1,13 @@
+<h1>Parent Gamer Database</h1>
+<p>Welcome to Parent Gamer Database! Trying to enjoy games with small children in the house? Only get 10 minutes peace at a time? Unsure if you can enjoy the game you want to play next? Here's what you need to know!</p>
+<p>This is <i>not</i> a database of suitability for children to view or play a game, this is for parents! It <b>is</b> noted where a game's maturity rating does not apply to the game's general gameplay - for example Death Stranding carries a strong maturity rating for a small number of cutscenes but the general gameplay is hiking and non-lethal combat.</p>
+<h2>All Games</h2>
+<p>Click <%= link_to "HERE", games_path %> to view all games.</p>
+<h2>Latest Updated Games</h2>
+<ul>
+  <% @latest_updated_games.each do |game| %>
+    <li>
+      <strong><%= link_to game.title, game_path(game) %></strong>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,71 @@
+<h1><%= @game.title %></h1>
+<p><%= link_to "← Back to All Games", games_path %> | <%= link_to "← Back to Home", root_path %></p>
+
+<div class="game-details">
+  <div class="detail-section">
+    <h3>Pause & Save Features</h3>
+    <div class="feature-grid">
+      <div class="feature">
+        <strong>Game Pausable:</strong>
+        <span class="<%= @game.game_pausable == true ? 'good' : @game.game_pausable == false ? 'bad' : 'unknown' %>">
+          <%= @game.game_pausable.nil? ? "Unknown" : (@game.game_pausable ? "Yes" : "No") %>
+        </span>
+        <% if @game.game_pausable_remark.present? %>
+          <p class="remark"><%= @game.game_pausable_remark %></p>
+        <% end %>
+      </div>
+
+      <div class="feature">
+        <strong>Quick Saving:</strong>
+        <span class="<%= @game.quick_save_possible == true ? 'good' : @game.quick_save_possible == false ? 'bad' : 'unknown' %>">
+          <%= @game.quick_save_possible.nil? ? "Unknown" : (@game.quick_save_possible ? "Yes" : "No") %>
+        </span>
+        <% if @game.quick_save_remark.present? %>
+          <span class="remark"> - <i><%= @game.quick_save_remark %></i></span>
+        <% end %>
+      </div>
+
+      <div class="feature">
+        <strong>Cut Scenes Pausable:</strong>
+        <span class="<%= @game.cut_scenes_pausable == true ? 'good' : @game.cut_scenes_pausable == false ? 'bad' : 'unknown' %>">
+          <%= @game.cut_scenes_pausable.nil? ? "Unknown" : (@game.cut_scenes_pausable ? "Yes" : "No") %>
+        </span>
+        <% if @game.cut_scenes_pausable_remark.present? %>
+          <p class="remark"><%= @game.cut_scenes_pausable_remark %></p>
+        <% end %>
+      </div>
+
+      <div class="feature">
+        <strong>Quick Resume Usable:</strong>
+        <span class="<%= @game.quick_resume_usable == true ? 'good' : @game.quick_resume_usable == false ? 'bad' : 'unknown' %>">
+          <%= @game.quick_resume_usable.nil? ? "Unknown" : (@game.quick_resume_usable ? "Yes" : "No") %>
+        </span>
+        <% if @game.quick_resume_remark.present? %>
+          <span class="remark"> - <i><%= @game.quick_resume_remark %></i></span>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <% if @game.has_multiplayer %>
+    <div class="detail-section">
+      <h3>Multiplayer Features</h3>
+      <div class="feature">
+        <strong>Drop-out Penalty:</strong>
+        <span class="<%= @game.mp_drop_out_penalty == true ? 'bad' : @game.mp_drop_out_penalty == false ? 'good' : 'unknown' %>">
+          <%= @game.mp_drop_out_penalty.nil? ? "Unknown" : (@game.mp_drop_out_penalty ? "Yes" : "No") %>
+        </span>
+        <% if @game.mp_drop_out_penalty_remark.present? %>
+          <p class="remark"><%= @game.mp_drop_out_penalty_remark %></p>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+
+  <% if @game.game_content_remark.present? %>
+    <div class="detail-section">
+      <h3>Content Notes</h3>
+      <p class="content-remark"><%= @game.game_content_remark %></p>
+    </div>
+  <% end %>
+</div>

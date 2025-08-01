@@ -1,0 +1,33 @@
+<h1>All Games</h1>
+<p><%= link_to "← Back to Home", root_path %></p>
+
+<div class="games-list">
+  <% @games.each do |game| %>
+    <div class="game-card">
+      <h3><%= link_to game.title, game_path(game) %></h3>
+      <div class="game-summary">
+        <% if game.game_pausable == true %>
+          <span class="badge good">✓ Pausable</span>
+        <% elsif game.game_pausable == false %>
+          <span class="badge bad">✗ Not Pausable</span>
+        <% end %>
+        
+        <% if game.quick_save_possible == true %>
+          <span class="badge good">✓ Quick Save</span>
+        <% elsif game.quick_save_possible == false %>
+          <span class="badge bad">✗ No Quick Save</span>
+        <% end %>
+        
+        <% if game.quick_resume_usable == true %>
+          <span class="badge good">✓ Working Quick Resume</span>
+        <% elsif game.quick_resume_usable == false %>
+          <span class="badge bad">✗ Quick Resume Issues</span>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<% if @games.empty? %>
+  <p>No games in the database yet.</p>
+<% end %>
